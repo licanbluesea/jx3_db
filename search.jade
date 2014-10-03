@@ -1,0 +1,102 @@
+doctype html
+html
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+        link(rel='stylesheet',href="assets/css/base.css")
+        link(rel='stylesheet',href="assets/css/search.css")
+    body.body
+            #contain
+                include ./common_head.jade
+                .lower_box
+                  .lon_con
+                   .bread_nav
+                     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的位置：
+                     a(href="#",target="blank") 数据库首页
+                     | >
+                     a(href="#",target="blank") 搜索
+                   .sel_box
+                     .search_info
+                      div
+                       | 找到“
+                       span 燃木
+                       | ”相关信息
+                       span 44
+                       |条
+                     .select_list
+                        dl
+                         dt 相关分类:
+                         dd 角色（1）
+                         dd.cur 装备（35）
+                         dd 物品 (2)
+                         dd 武学 (1)
+                     .select_list2
+                       div
+                         ul
+                          li 武器（25）
+                          li 暗器（3）
+                          li 服饰（1）
+                          li 饰品（3）
+                          li 外装（2）
+                     .select_list
+                        dl
+                         dt 品质:
+                         dd.pb 破败
+                         dd.pt 普通
+                         dd.jq 精巧
+                         dd.zy 卓越
+                         dd.zq 珍奇
+                         dd.xs 稀世
+                     .select_list
+                        dl
+                         dt 品级:
+                         dd
+                            input(size="5",type="text")
+                            | -
+                            input(size="5",type="text")
+                            button 确定
+                     .selected
+                        | 已选条件:
+                        span 筛选：燃木
+                        span 装备
+                   .show_list
+                       mixin show_iterm(img,name,dec,istip)
+                           li
+                               if istip
+                                 span.tip
+                               span.img
+                                   img(width="42",height="42")
+                               span.dec
+                                   p 燃木
+                                   p 80级&nbsp;&nbsp;&nbsp;&nbsp;棍类
+                       ul
+                         +show_iterm("","","",1)
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                         +show_iterm("","","")
+                   .page_list
+                       div
+                         ul
+                           li
+                            a 上一页
+                           li
+                            a 1
+                           li
+                            a 下一页
+
+
+
+                include ./common.jade

@@ -1,0 +1,30 @@
+.above_box
+    .top_box
+        ul
+            - var top_url = [{'name':'游戏官网','url':'http://jx3.xoyo.com'},{'name':'游戏论坛','url':'bbs.jx3.xoyo.com'}];
+            each val,index in top_url
+                - var len = top_url.length-1
+                if index == len
+                    li.noline
+                        a(href=val.url,target='target')=val.name
+                else
+                    li
+                        a(href=val.url,target='target')=val.name
+    .search_box
+
+        .input_box
+            span#search_btn
+            input(name='search_box',type='text')
+    .nav_box
+        mixin nav(name,url,iscur)
+            li
+                if iscur
+                    a.cur(href=url,target="_blank")= name
+                else
+                    a(href=url,target="_blank")= name
+        ul
+            +nav("首页","#",false)
+            +nav("装备","#",false)
+            +nav("物品","#",false)
+            +nav("武学","#",false)
+

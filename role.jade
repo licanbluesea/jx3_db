@@ -1,0 +1,151 @@
+doctype html
+html
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+        link(rel='stylesheet',href="assets/css/base.css")
+        link(rel='stylesheet',href="assets/css/search.css")
+        body.body
+            #contain
+                include ./common_head.jade
+                .lower_box
+                  .lon_con
+                   .bread_nav
+                          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的位置：
+                          a(href="#",target="blank") 数据库首页
+                          | >
+                          a(href="#",target="blank") 角色
+                   .equip_box
+                       .equip_details
+                         .equip_title
+                           .share_box
+                             //JiaThis Button BEGIN
+                             .jiathis_style
+                                 span.jiathis_txt 分享到：
+                                 a.jiathis_button_qzone
+                                 a.jiathis_button_tsina
+                                 a.jiathis_button_tqq
+                                 a.jiathis_button_weixin
+                                 a.jiathis_button_renren
+                                 a.jiathis_button_xiaoyou
+
+
+                             script(type='text/javascript').
+                                    var jiathis_config={
+                                    url:"http://jx3.xoyo.com",
+                                    summary:"剑网3游戏资料库",
+                                    title:"剑网3游戏资料库 ##",
+                                    shortUrl:false,
+                                    hideMore:false
+                                    }
+                             script(type='text/javascript', src='http://v3.jiathis.com/code/jia.js', charset='utf-8')
+                             //JiaThis Button END
+                           .equip_name
+                               .img
+                                   img(width="42",height="42")
+                               .dec
+                                  div
+                                   | 燃木
+                                   p.equip_level
+                                    i.level 精炼等级0/8
+                                    i.way 拾取后绑定
+                                  p.detail 80级&nbsp;&nbsp;棍类&nbsp;&nbsp;近身武器&nbsp;&nbsp;双兵类&nbsp;&nbsp;速度1.3
+                         .check_box
+                           .swf
+                         .data
+                           p 近身伤害提高  201-335
+                           p 每秒伤害  204.2
+                           p 体质   +952
+                           p 根骨   +952
+                         .rasie
+                           p 治疗成效提高  201-335
+                           p 阴性内功会心等级提高  71
+                           p 阴性内功会心效果等级提高  48
+                           p 加速等级提高  214
+                           p 治疗成效提高  201-335
+                           p 阴性内功会心等级提高  71
+                           p 阴性内功会心效果等级提高  48
+                           p 加速等级提高  214
+                         .g_rasie
+                            p 装备：“回雪飘摇”招式的疗伤成效提高5%
+                            p 装备：“王母挥诀”招式的疗伤成效提高5%
+                            p 装备：施展疗伤招式命中后，一定几率使目标获得“翔鸾舞柳”效果，并立即造成“翔鸾舞柳”的全部疗伤效果。
+                         .hole
+                           p  金/土镶嵌孔：根骨+？
+                           p  木/火镶嵌孔：阴性内功会心等级提高？
+                           p  土/火镶嵌孔：治疗成效提高？
+                           p  <只能镶嵌五彩石>
+                         .need
+                            p 需要等级  90
+                            p 最大耐久度  1651
+                         .score
+                            p 品质等级  440
+                            p 装备分数  1320
+                         .story
+                           h1 装备故事：
+                           p 话说回神龙年间，那时江湖上还没有七秀坊这个地方，但武林中出现了一名奇女子，人称公孙大娘，大娘还有个长得一模一样的同胞妹妹，但江湖上能分辨她 俩的人没有几个。公孙氏的剑舞在当时可以说是名动天下，就连当朝皇帝唐中宗都不免在一年内连下七道圣谕招大娘入宫只为一观公孙氏剑舞，公孙二娘请旨入宫。
+                         .tab_box
+                           .tab_list
+                             ul
+                                li
+                                  a.cur 相关物品
+                                li
+                                  a 相关任务
+                           .tab_con
+                                div
+                                  ul
+                                    li
+
+                                          | 354
+                                          span.place 扬州野外
+                                          span.img
+                                            span
+                                             img(width="42",height="42")
+                                            |燃木
+                                    li
+
+                                          | 354
+                                          span.place 扬州野外
+                                          span.img
+                                            span
+                                             img(width="42",height="42")
+                                            |燃木
+
+
+                       .recent_look
+                             h1 最近浏览
+                             mixin show_iterm(img,name,dec,istip)
+                                 li
+                                      if istip
+                                        span.tip
+                                      span.img
+                                        img(width="42",height="42")
+                                      span.dec
+                                         p 燃木
+                                         p 80级&nbsp;&nbsp;&nbsp;&nbsp;棍类
+                             ul
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+                                +show_iterm("","","")
+
+
+
+
+
+
+
+                include ./common.jade

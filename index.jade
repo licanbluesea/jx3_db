@@ -1,0 +1,77 @@
+doctype html
+html
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+
+        link(rel='stylesheet',href="assets/css/base.css")
+        link(rel='stylesheet',href="assets/css/index.css")
+     body.body
+       #contain
+         .above_box
+           .top_box
+             ul
+                - var top_url = [{'name':'游戏官网','url':'http://jx3.xoyo.com'},{'name':'游戏论坛','url':'bbs.jx3.xoyo.com'}];
+                each val,index in top_url
+                 - var len = top_url.length-1
+                 if index == len
+                  li.noline
+                      a(href=val.url,target='target')=val.name
+                 else
+                  li
+                      a(href=val.url,target='target')=val.name
+           .search_box
+            .tab_box
+                ul
+                    li.index_tab
+                     a.cur(target='self') 首页
+                    li.equip_tab
+                     a(target='self') 装备
+                    li.article_tab
+                     a(target='self') 物品
+                    li.kongfu_tab.noline
+                     a(target='self') 武学
+            .input_box
+                span#search_btn
+                input(name='search_box',type='text')
+            .hot_sheet
+                span 热门搜索：
+                ul
+                    - var hot_sheet = [{'name':'瑰石','url':'http://jx3.xoyo.com'},{'name':'血战天策','url':'bbs.jx3.xoyo.com'}];
+                    each val,index in hot_sheet
+                        li
+                            a(href=val.url,target='target')=val.name
+           .share_box
+               //JiaThis Button BEGIN
+               .jiathis_style
+                         span.jiathis_txt 分享到：
+                         a.jiathis_button_qzone
+                         a.jiathis_button_tsina
+                         a.jiathis_button_tqq
+                         a.jiathis_button_weixin
+                         a.jiathis_button_renren
+                         a.jiathis_button_xiaoyou
+
+
+               script(type='text/javascript').
+                      var jiathis_config={
+                      url:"http://jx3.xoyo.com",
+                      summary:"剑网3游戏资料库",
+                      title:"剑网3游戏资料库 ##",
+                      shortUrl:false,
+                      hideMore:false
+                      }
+               script(type='text/javascript', src='http://v3.jiathis.com/code/jia.js', charset='utf-8')
+               //JiaThis Button END
+
+         .lower_box
+          .log_box
+            ul
+                - var log_list = [{"title":"多玩魔兽数据库9月12日更新了5.4新增的武器和装备","time":"2014 10.01","url":"http:jx3.xoyo.com"},{"title":"多玩魔兽数据库9月12日更新了5.4新增的武器和装备","time":"2014 10.01","url":"http:jx3.xoyo.com"},{"title":"多玩魔兽数据库9月12日更新了5.4新增的武器和装备","time":"2014 10.01","url":"http:jx3.xoyo.com"},{"title":"多玩魔兽数据库9月12日更新了5.4新增的武器和装备","time":"2014 10.01","url":"http:jx3.xoyo.com"}];
+                each val,index in log_list
+                    li
+                        a(href=val.url,target='target')
+                            span.time= val.time
+                            span.title=  val.title
+
+         include ./common.jade

@@ -1,0 +1,118 @@
+doctype html
+html
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+        link(rel='stylesheet',href="assets/css/base.css")
+        link(rel='stylesheet',href="assets/css/search.css")
+        body.body
+            #contain
+                include ./common_head.jade
+                .lower_box
+                  .lon_con
+                   .sel_box
+                     .select_list.equid
+                       ul
+                        li
+                          span 全部
+                        li.cur
+                          span 武器
+                        li
+                          span 暗器
+                        li
+                          span 防具
+                        li
+                          span 饰品
+                        li
+                          span 外装
+                     .select_list3
+                       div
+                         ul
+                          li 棍类
+                          li 长兵
+                          li 短兵
+                          li 双兵
+                          li 笔类
+                          li 重兵
+                          li 虫笛
+                          li 千机匣
+                          li 弯刀
+                          li 棒
+                   .iterm_box
+                       .list_left
+                           .show_list
+                               mixin show_iterm(img,name,dec,istip)
+                                   li
+                                       if istip
+                                         span.tip
+                                       span.img
+                                           img(width="42",height="42")
+                                       span.dec
+                                           p 燃木
+                                           p 80级&nbsp;&nbsp;&nbsp;&nbsp;棍类
+                               ul
+                                 +show_iterm("","","",1)
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                                 +show_iterm("","","")
+                           .page_list
+                               div
+                                 ul
+                                   li
+                                    a 上一页
+                                   li
+                                    a 1
+                                   li
+                                    a 下一页
+                       .list_right
+                           .search_area
+                               h1 按属性刷选
+                               h3 关键字
+                                 input(type="text", size="40",placeholder="物品关键字")
+                               h3 基础属性
+                               div
+                                 | 等级
+                                 input(type="text",placeholder="0", size="1")
+                                 | -
+                                 input(type="text",placeholder="50", size="1")
+                                 | &nbsp;&nbsp;品级
+                                 input(type="text",placeholder="0", size="1")
+                                 | -
+                                 input(type="text",placeholder="60", size="1")
+                               h3 筛选条件
+                               div
+                                   p
+                                     | 品质
+                                     select
+                                   p
+                                     | 门派
+                                     select
+                                   p
+                                     | 部位
+                                     select
+                               h3 装备属性
+                                div
+                                 select.short
+                                 select.short
+                               div
+                                a 选择
+                                a 重置
+
+
+
+
+
+                include ./common.jade
