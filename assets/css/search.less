@@ -424,6 +424,7 @@
 .tab_box{
   .tab_list{
     border-bottom: 1px #8CB0B0 solid;
+    overflow: hidden;
     ul{
       overflow: hidden;
     }
@@ -458,6 +459,7 @@
     }
     .img{
       .fl;
+      vertical-align:middle;
       span{
         background: #fff;
         padding: 2px;
@@ -465,11 +467,403 @@
         img{
           display: inline;
           border: 1px #E4E5E4 solid;
+
         }
       }
     }
     span{
       .color(#328543);
+    }
+  }
+}
+.role_box{
+  .site_bc;
+  padding-top: 40px;
+  .role_name{
+    .fl;
+    width: 260px;
+    padding-left: 40px;
+    line-height: 18px;
+    h3{
+      height:28px;
+      line-height:28px;
+      font-size: 24px;
+      color:#345A5C ;
+      span{
+        margin:0 10px;
+        font-size: 12px;
+        color: #000;
+      }
+    }
+    .profession{
+      .mt(5px);
+      span{
+        margin-right:10px;
+      }
+    }
+    .experience{
+      .mt(5px);
+    }
+  }
+  .share_box{
+    .fr;
+    padding-right: 40px;
+  }
+}
+.suit_show{
+  .site_bc;
+  .suit_tab{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    ul{
+      .fr;
+      margin-right: 50px;
+    }
+    li{
+      margin: 0 5px;
+    }
+    li,a{
+      .fl;
+      display: inline-block;
+      width:108px;
+      height: 39px;
+      background: url("@{img_url}suit_tab.jpg") 0 -39px no-repeat;
+      line-height: 39px;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px #3E5756;
+      cursor: pointer;
+      &:hover,&.cur{
+        background-position: 0 0;
+        text-decoration: none;
+      }
+    }
+  }
+  .suit_con{
+    .site_bc;
+    position: relative;
+    z-index: 0;
+    margin-top: -6px;
+    width:918px;
+    height: 626px;
+    background: url("@{img_url}suit_con.jpg") no-repeat;
+  }
+}
+.suit{
+  position: absolute;
+  z-index: 5;
+  width:230px;
+  height: 48px;
+  background: url("@{img_url}suit_bg.png") no-repeat;
+}
+.hat_suit:extend(.suit){
+  top:50px;
+  left:50px;
+
+}
+.hat_suit_dress:extend(.suit){
+  top:110px;
+  left:50px;
+  background-position:0 -48px;
+}
+.jack_suit:extend(.suit){
+  top:190px;
+  left:50px;
+  background-position:0 -96px;
+}
+.jack_suit_dress:extend(.suit){
+  top:250px;
+  left:50px;
+  background-position:0 -144px;
+}
+.cestus_suit:extend(.suit){
+  top:340px;
+  left:50px;
+  background-position: 0 -192px;
+}
+.cestus_suit_dress:extend(.suit){
+  top:400px;
+  left:50px;
+  background-position: 0 -240px;
+}
+.master_weapon:extend(.suit){
+  top:550px;
+  left:50px;
+  background-position: 0 -288px;
+}
+.assistant_weapon:extend(.suit){
+  top:550px;
+  left:255px;
+  background-position: 0 -336px;
+}
+.hidden_weapon:extend(.suit){
+  top:550px;
+  left:460px;
+  background-position: 0 -384px;
+}
+.bullet_weapon:extend(.suit){
+  top:560px;
+  left:665px;
+  background-position: 0 -432px;
+}
+.bangle_suit:extend(.suit){
+  top:50px;
+  right:50px;
+  background-position:right 0;
+  .right_rank;
+
+}
+.pants_suit:extend(.suit){
+  top:110px;
+  right:50px;
+  background-position:right -48px;
+  .right_rank;
+}
+.shoe_suit:extend(.suit){
+  top:170px;
+  right:50px;
+  background-position:right -96px;
+  .right_rank;
+}
+.necklace_suit:extend(.suit){
+  top:230px;
+  right:50px;
+  background-position:right -144px;
+  .right_rank;
+}
+.waist_suit:extend(.suit){
+  top:290px;
+  right:50px;
+  background-position: right -192px;
+  .right_rank;
+}
+.ring_suit:extend(.suit){
+  top:350px;
+  right:50px;
+  background-position: right -240px;
+  .right_rank;
+}
+.ring_suit2:extend(.ring_suit all){
+  top:410px;
+  right:50px;
+}
+.suit_img{
+  .fl;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  width:42px;
+  padding: 3px;
+  span{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    width: 49px;
+    height: 49px;
+    background:url("@{img_url}inventory-slots.png") -245px 0  no-repeat;
+  }
+}
+.suit_name{
+  .fl;
+   padding-left: 10px;
+   img{
+     margin: 0 2px ;
+   }
+  .name{
+    color: #F63DF7;
+    line-height: 24px;
+  }
+  .worth{
+    color:#E5E533 ;
+    line-height: 24px;
+  }
+}
+.right_rank{
+  .suit_img{
+    .fr;
+  }
+  .suit_name{
+    .fr;
+    padding-right: 10px;
+    text-align: right;
+
+  }
+}
+.suit_score{
+  position: absolute;
+  left:335px;
+  top:15px;
+  z-index: 7;
+  width: 275px;
+  height: 65px;
+  background: url("@{img_url}score_bg.jpg") no-repeat;
+  span{
+    .fl;
+    height: 65px;
+    &.mark{
+      display: inline-block;
+      position: relative;
+      width:85px;
+
+      background: url("@{img_url}score_mark.png") no-repeat;
+      em{
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background:url("@{img_url}score_mark.png") 0 bottom no-repeat;
+        &.nest{
+          top:46px;
+          left: 17px;
+        }
+        &.streng{
+          top:46px;
+          right:17px;
+        }
+      }
+    }
+    &.m2{
+      background-position:0 -65px;
+    }
+    &.m3{
+      background-position: 0 -130px;
+    }
+    &.m4{
+      background-position: 0 -195px;
+    }
+    &.m5{
+      background-position: 0 -260px;
+    }
+    &.m6{
+      background-position: 0 -325px;
+    }
+    &.m7{
+      background-position: 0 -390px;
+    }
+    &.suit_score_value{
+      width: 150px;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 65px;
+      color: #fff;
+      text-shadow: 1px 1px 2px #1D2C2B;
+      em{
+        padding: 0 10px;
+        color:#FFFA40 ;
+      }
+    }
+  }
+}
+.role_value{
+  position: absolute;
+  left:50px;
+  top:455px;
+  width:260px;
+  height: 75px;
+  color: #fff;
+  z-index: 8;
+  text-shadow: 1px 1px 2px #1D2C2B;
+  h3{
+    font-size: 14px;
+  }
+  span{
+    .mt(5px);
+    display: block;
+    background: url("@{img_url}life_bg.jpg") 0 5px no-repeat;
+    text-align: center;
+    &.fix_bg{
+      background: url("@{img_url}fix_bg.jpg") 0 5px no-repeat;
+    }
+  }
+}
+.role_view{
+  position: absolute;
+  left:229px;
+  top:44px;
+  z-index: 4;
+  img{
+    display: block;
+  }
+}
+.summary_box{
+  .site_bc;
+  .mt(20px);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.summary_left{
+  .fl;
+
+  border: 1px #D1D3D0 solid;
+  width: 460px;
+  padding: 15px;
+  margin-left: 40px;
+  margin-right:20px;
+  background:#EEEFEE;
+  overflow: hidden;
+  h3{
+    .title;
+    margin-bottom: 10px;
+  }
+  .summary_tab{
+    position: absolute;
+    right:0px;
+    top:15px;
+    li{
+      .list-left;
+      margin: 0 2px;
+      width: 13px;
+      height: 13px;
+      background: url("@{img_url}arrow_tab.jpg") no-repeat;
+      cursor: pointer;
+      &.left_btn{
+        background-position:  0 0;
+      }
+      &.right_btn{
+        background-position: -13px 0;
+      }
+    }
+  }
+  li{
+    height:24px;
+    line-height:24px ;
+    span{
+      .fr;
+    }
+  }
+  .summary_base{
+    .fl;
+    width: 195px;
+    margin-right: 20px;
+  }
+  .summary_attack{
+    .fl;
+    position: relative;
+    width: 230px;
+  }
+}
+.summary_right{
+  .fl;
+  width:405px;
+  .tab_list{
+    border-bottom-width: 2px;
+  }
+  .tech_con{
+    padding: 20px;
+    border: 1px #D1D3D0 solid;
+    background:#EEEFEE;
+    overflow: hidden;
+    li{
+      .list-left;
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      text-align: center;
+      span{
+        display: block;
+      }
+
     }
   }
 }
